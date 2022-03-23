@@ -1,8 +1,6 @@
 import "./App.css";
-import { TextHandler } from "./textHandler";
 
 function App() {
-  var handler = new TextHandler();
 
   return (
     <div className="App">
@@ -20,7 +18,7 @@ function App() {
                 width="200"
                 height="200"
                 alt="keith-1"
-                onClick={handler.sendMessage("test")}
+                onClick={console.log("CLICKED")}
               />
             </button>
           </div>
