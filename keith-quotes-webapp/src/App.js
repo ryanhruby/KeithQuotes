@@ -1,22 +1,65 @@
 import "./App.css";
 
 function App() {
-  function sendMessage(message) {
-    fetch("/send/message", {
-      method: 'POST',
+  const sendMessage1 = function sendMessage1() {
+    fetch("http://localhost:3001/send/message", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "string",
       },
-      body: JSON.stringify(message)
-    }).then(res => res.json())
-  }
+      body: "Quote 1",
+    }).then((res) => res.json());
+  };
+
+  const sendMessage2 = function sendMessage2() {
+    fetch("http://localhost:3001/send/message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify("Quote 2"),
+    }).then((res) => res.json());
+  };
+
+  const sendMessage3 = function sendMessage3() {
+    fetch("http://localhost:3001/send/message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify("Quote 3"),
+    }).then((res) => res.json());
+  };
+
+  const sendMessage4 = function sendMessage4() {
+    fetch("http://localhost:3001/send/message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "string",
+        Accept: "application/json",
+      },
+      body: JSON.stringify("Quote 4"),
+    }).then((res) => res.json());
+  };
+
+  const sendMessage5 = function sendMessage5() {
+    fetch("http://localhost:3001/send/message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "string",
+        Accept: "application/json",
+      },
+      body: "Quote 5",
+    }).then((res) => res.json());
+  };
 
   return (
     <div className="App">
-      <header className="App-header"> 
+      <header className="App-header">
         <strong>Life Advice with Keith</strong>
       </header>
-      <body>
+      <div>
         <img src="keith-logo.png" className="App-logo" alt="keith-logo" />
 
         <div id="button-row" className="button-row">
@@ -27,7 +70,7 @@ function App() {
                 width="200"
                 height="200"
                 alt="keith-1"
-                onClick={sendMessage("trial one")}
+                onClick={sendMessage1}
               />
             </button>
           </div>
@@ -38,7 +81,7 @@ function App() {
                 width="200"
                 height="200"
                 alt="keith-2"
-                onClick={console.log("CLICKED")}
+                onClick={() => console.log("Clicked button 2")}
               />
             </button>
           </div>
@@ -49,7 +92,7 @@ function App() {
                 width="200"
                 height="200"
                 alt="keith-3"
-                onClick={console.log("CLICKED")}
+                onClick={() => console.log("Clicked button 3")}
               />
             </button>
           </div>
@@ -60,7 +103,7 @@ function App() {
                 width="200"
                 height="200"
                 alt="keith-4"
-                onClick={console.log("CLICKED")}
+                onClick={() => console.log("Clicked button 4")}
               />
             </button>
           </div>
@@ -71,12 +114,12 @@ function App() {
                 width="200"
                 height="200"
                 alt="keith-5"
-                onClick={console.log("CLICKED")}
+                onClick={() => console.log("Clicked button 5")}
               />
             </button>
           </div>
         </div>
-      </body>
+      </div>
     </div>
   );
 }
