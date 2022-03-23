@@ -1,6 +1,15 @@
 import "./App.css";
 
 function App() {
+  function sendMessage(message) {
+    fetch("/send/message", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(message)
+    }).then(res => res.json())
+  }
 
   return (
     <div className="App">
@@ -18,7 +27,7 @@ function App() {
                 width="200"
                 height="200"
                 alt="keith-1"
-                onClick={console.log("CLICKED")}
+                onClick={sendMessage("trial one")}
               />
             </button>
           </div>
