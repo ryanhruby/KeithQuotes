@@ -1,20 +1,9 @@
 import "./App.css";
-
-function sendMessage(message) {
-  // var twilio = require("twilio");
-
-  // var client = new twilio("ACf7aabced2a6fd9e9c72f2b57d8127981", "f42ada5e2861d45d77dd874ddd2f6554");
-
-  // client.messages
-  // .create({
-  //   to: '+14027696011',
-  //   from: '+12087470934',
-  //   body: message
-  // })
-  // .catch(error => console.error(error));
-}
+import { TextHandler } from "./textHandler";
 
 function App() {
+  var handler = new TextHandler();
+
   return (
     <div className="App">
       <header className="App-header"> 
@@ -23,19 +12,19 @@ function App() {
       <body>
         <img src="keith-logo.png" className="App-logo" alt="keith-logo" />
 
-        <div id="button-row" class="button-row">
-          <div id="quote_button_1" class="button-div">
+        <div id="button-row" className="button-row">
+          <div id="quote_button_1" className="button-div">
             <button>
               <img
                 src="keith-1.png"
                 width="200"
                 height="200"
                 alt="keith-1"
-                onClick={sendMessage("test")}
+                onClick={handler.sendMessage("test")}
               />
             </button>
           </div>
-          <div id="quote_button_2" class="button-div">
+          <div id="quote_button_2" className="button-div">
             <button>
               <img
                 src="keith-2.png"
@@ -46,7 +35,7 @@ function App() {
               />
             </button>
           </div>
-          <div id="quote_button_3" class="button-div">
+          <div id="quote_button_3" className="button-div">
             <button>
               <img
                 src="keith-3.png"
@@ -57,7 +46,7 @@ function App() {
               />
             </button>
           </div>
-          <div id="quote_button_4" class="button-div">
+          <div id="quote_button_4" className="button-div">
             <button>
               <img
                 src="keith-4.png"
@@ -68,7 +57,7 @@ function App() {
               />
             </button>
           </div>
-          <div id="quote_button_5" class="button-div">
+          <div id="quote_button_5" className="button-div">
             <button>
               <img
                 src="keith-5.png"
