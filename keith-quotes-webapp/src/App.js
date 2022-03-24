@@ -73,7 +73,7 @@ function App() {
                 width="200"
                 height="200"
                 alt="keith-2"
-                onClick={() => sendMessage2}
+                onClick={sendMessage2}
               />
             </button>
           </div>
@@ -84,7 +84,7 @@ function App() {
                 width="200"
                 height="200"
                 alt="keith-3"
-                onClick={() => sendMessage3}
+                onClick={sendMessage3}
               />
             </button>
           </div>
@@ -95,7 +95,7 @@ function App() {
                 width="200"
                 height="200"
                 alt="keith-4"
-                onClick={() => sendMessage4}
+                onClick={sendMessage4}
               />
             </button>
           </div>
@@ -106,7 +106,7 @@ function App() {
                 width="200"
                 height="200"
                 alt="keith-5"
-                onClick={() => sendMessage5}
+                onClick={sendMessage5}
               />
             </button>
           </div>
