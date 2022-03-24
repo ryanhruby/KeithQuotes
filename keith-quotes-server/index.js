@@ -35,6 +35,78 @@ app.post("/send/message1", (req, res) => {
     });
 });
 
+app.post("/send/message2", (req, res) => {
+  res.header("Content-Type", "application/json");
+  client.messages
+    .create({
+      username: "jacobitz.vivian@cox.net",
+      body: "Keith Quote 1",
+      from: process.env.TWILIO_NUMBER,
+      to: "+14026814485",
+    })
+    .then(() => {
+      res.send(JSON.stringify({ success: true }));
+    })
+    .catch((err) => {
+      console.log(err);
+      res.send(JSON.stringify({ success: false }));
+    });
+});
+
+app.post("/send/message3", (req, res) => {
+  res.header("Content-Type", "application/json");
+  client.messages
+    .create({
+      username: "jacobitz.vivian@cox.net",
+      body: "Keith Quote 1",
+      from: process.env.TWILIO_NUMBER,
+      to: "+14026814485",
+    })
+    .then(() => {
+      res.send(JSON.stringify({ success: true }));
+    })
+    .catch((err) => {
+      console.log(err);
+      res.send(JSON.stringify({ success: false }));
+    });
+});
+
+app.post("/send/message4", (req, res) => {
+  res.header("Content-Type", "application/json");
+  client.messages
+    .create({
+      username: "jacobitz.vivian@cox.net",
+      body: "Keith Quote 1",
+      from: process.env.TWILIO_NUMBER,
+      to: "+14026814485",
+    })
+    .then(() => {
+      res.send(JSON.stringify({ success: true }));
+    })
+    .catch((err) => {
+      console.log(err);
+      res.send(JSON.stringify({ success: false }));
+    });
+});
+
+app.post("/send/message5", (req, res) => {
+  res.header("Content-Type", "application/json");
+  client.messages
+    .create({
+      username: "jacobitz.vivian@cox.net",
+      body: "Keith Quote 1",
+      from: process.env.TWILIO_NUMBER,
+      to: "+14026814485",
+    })
+    .then(() => {
+      res.send(JSON.stringify({ success: true }));
+    })
+    .catch((err) => {
+      console.log(err);
+      res.send(JSON.stringify({ success: false }));
+    });
+});
+
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`);
 });
