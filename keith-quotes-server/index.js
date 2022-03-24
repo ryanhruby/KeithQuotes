@@ -17,12 +17,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(pino);
 
-app.post("/send/message", (req, res) => {
+app.post("/send/message1", (req, res) => {
   res.header("Content-Type", "application/json");
   client.messages
     .create({
       username: "jacobitz.vivian@cox.net",
-      body: req.body,
+      body: "Keith Quote 1",
       from: process.env.TWILIO_NUMBER,
       to: "+14026814485",
     })
